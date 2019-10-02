@@ -1,0 +1,107 @@
+/*!
+ * Stylesheet for design
+ *
+ * This stylesheet is for the design course and kmom10.
+ */
+/**
+  * Normalize and reset the style.
+  */
+@import "normalize.css/normalize.less";
+/**
+ * A responsive menu.
+ */
+@import "@desinax/responsive-menu/less/responsive-menu.less";
+/**
+ * Internal self contained modules, save in directory module/.
+ */
+@import "module/navbar.less";
+@import "module/header.less";
+@import "module/main.less";
+@import "module/footer.less";
+@import "module/utils.less";
+@import "module/stylechooser.less";
+@import "module/responsive.less";
+@import "module/flash.less";
+@import "module/multi-col3.less";
+/**
+ * Import the typographic grid.
+ */
+@import "@desinax/typographic-grid/less/typography-font-families.less";
+@import "@desinax/typographic-grid/less/typography-defaults.less";
+@import url('https://fonts.googleapis.com/css?family=Gentium+Basic|Mitr');
+
+// Show the grid
+
+.hgrid .inner-wrap {
+    @gridImage: "../img/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+}
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+@import "base/base_kmom03.less";
+/**
+ * Figure and figcaption for images and other media using figure/figcaption
+ */
+@import "@desinax/figure/less/asciinema.less";
+@import "@desinax/figure/less/codepen.less";
+@import "@desinax/figure/less/figure.less";
+// Enable style from the module and optinally add customized layout
+
+figure.figure {
+    #desinax-figure.figure();
+}
+
+figure.asciinema {
+    &:extend(figure.figure);
+    #desinax-figure.asciinema();
+}
+
+figure.codepen,
+figure.figure-codepen {
+    &:extend(figure.figure);
+    #desinax-figure.codepen();
+}
+/**
+ * Import the vertical grid.
+ */
+@import "@desinax/vertical-grid/less/grid.less";
+@import "layout/layout_v3.less";
+ // Default grid, change to fit your requirements.
+@columnWidth: 30;
+@gutterWidth: 10;
+@columns: 24;
+@gridType: "float";
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+@import "layout/responsive.less";
+@import "layout/regions.less";
+// To add style for ?regions
+/**
+  * Font Awesome.
+  */
+@import "@fortawesome/fontawesome-free/less/fontawesome.less";
+@import "@fortawesome/fontawesome-free/less/solid.less";
+@import "@fortawesome/fontawesome-free/less/brands.less";
+/**
+  * My own settings, not currently in their own module.
+  */
+@import "module/kmom10-design.less";
+// Magic number and base fontsize
+@magicNumber: 24px; // 22px
+@fontSizeBody: 16px;
+//Adapt typographic grid to my style
+@fontFamilyHeadings: @fontFamilyMitr;
+@fontFamilyBody: @fontFamilyGentiumBasic;
+@fontFamilyCode: @fontFamilyHelvetica;
+@bgColorHtml: white;
+@bgColorBody: white;
+@bgColorFooter: #102946;
+@faviconColor: white;
+@textColorFooter: white;
+@bgColorColumns3: #dfe5ec;
+@linktextColor: black;
+@textColorH4: #a2ba18;
+@colorH4BorderBottom: darkgray;

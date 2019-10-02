@@ -1,0 +1,81 @@
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+@bgColorHtml: #424242;
+@bgColorBody: #fff;
+@colorBody: #333;
+@backgroundImage: none;
+@textColorH4: black;
+@linktextColor: black;
+
+/**Customized font*/
+
+@fontFamilyTextMeOne: 'Text Me One', sans-serif;
+@fontFamilyFjallaOne: 'Fjalla One', sans-serif;
+
+@fontFamilyLibreBaskerville: 'Libre Baskerville', serif;
+@fontFamilyCinzel: 'Cinzel', serif;
+
+@fontFamilyAmaticSC: 'Amatic SC', cursive;
+@fontFamilyExo: 'Exo', sans-serif;
+@fontFamilyMitr: 'Mitr', sans-serif;
+@fontFamilyGentiumBasic: 'Gentium Basic', serif;
+@fontFamilyIBMPlexSansCondensed: 'IBM Plex Sans Condensed', sans-serif;
+@fontFamilyNotable: 'Notable', sans-serif;
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+    //background-color: @bgColorHtml;
+    height: 100%;
+    background-image: @backgroundImage;
+    background-attachment: fixed;
+}
+
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: @colorBody;
+    background-color: @bgColorBody;
+    //background-image: @backgroundImage;
+    height: 100%;
+    width: 100%;
+    #desinax-hgrid.font(@fontSizeBody);
+    //font: 100.01%/1 @fontFamilyBody;
+}
+
+h4 {
+    color: @textColorH4;
+}
+
+.inner-wrap .row {
+    margin: 0;
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: @linktextColor;
+}
+
+h1 {
+    word-wrap: break-word;
+}
+
+.wrap-all {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 100%;
+}
+
+// Activate grid and affect all typographic elements
+#desinax-hgrid.activateDefaultTypography();
